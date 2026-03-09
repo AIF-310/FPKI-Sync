@@ -1,0 +1,13 @@
+# Ignore the configuration file containing secrets
+config.json
+
+# Ignore temporary certificate files
+*.cer
+
+# Ignore local logs and transcripts
+Logs/
+*.txt
+
+# Ignore OS/Editor specific files
+.vscode/
+.DS_Store
