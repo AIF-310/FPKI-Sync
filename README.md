@@ -7,7 +7,7 @@ Automates the lifecycle of Federal PKI trust in Microsoft Entra ID by comparing 
 - [Prerequisites & Setup](#prerequisites--setup)
   - [PowerShell Environment](#1-powershell-environment)
   - [Azure AD App Registration](#2-azure-ad-app-registration)
-  - [GitHub Personal Access Token (PAT)](#3-github-personal-access-token-pat)
+  - [Github account] with a [GitHub Personal Access Token (PAT)](#3-github-personal-access-token-pat)
 - [Configuration (config.json)](#configuration-configjson)
 - [Logic & Permissions Reference](#logic--permissions-reference)
 - [Security & Local Cleanup](#security--local-cleanup)
@@ -18,22 +18,24 @@ This tool automates the lifecycle of Federal PKI trust in Microsoft Entra ID. It
 
 ## Prerequisites & Setup
 ### 1. PowerShell Environment
-- Windows PowerShell 5.1
-- Microsoft.Graph Module (v2.x):
+- At least Windows PowerShell 5.1
+- Microsoft.Graph Module minimum version(v2.x):
 ```
-Install-Module Microsoft.Graph -Scope CurrentUser
+https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation?view=graph-powershell-1.0
 ```
 
-### 2. Azure AD App Registration
+### 2. Entra ID App Registration - 
 The script uses Certificate-Based Authentication (CBA) to interact with Microsoft Graph.
 - Required Permission: PublicKeyInfrastructure.ReadWrite.All (Application)
 - Admin Consent: Must be granted in Azure Portal
-- Reference: Register an application with Microsoft Identity
+- Reference: [Register an application with Microsoft Identity](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
 
-### 3. GitHub Personal Access Token (PAT)
+
+### 3. GitHub Account - https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account
+Personal Access Token (PAT) - 
 Used to publish the .p7b file to your GitHub repository.
 - Scopes: repo (full control of private repositories)
-- Reference: Creating a personal access token (classic)
+- Reference: [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
 
 ## Configuration (config.json)
 Create this file in the script's root directory.
