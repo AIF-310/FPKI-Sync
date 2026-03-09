@@ -29,6 +29,7 @@ The script uses Certificate-Based Authentication (CBA) to interact with Microsof
 - Required Permission: PublicKeyInfrastructure.ReadWrite.All (Application)
 - Admin Consent: Must be granted in Azure Portal
 - Reference: [Register an application with Microsoft Identity](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
+- Reference: {Create a self-signed public certificate to authenticate your application])https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-self-signed-certificate)
 
 
 ### 3. GitHub Account - https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account
